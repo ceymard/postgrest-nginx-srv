@@ -1,3 +1,4 @@
 #!/usr/bin/with-contenv sh
 
-/usr/local/bin/postgrest /etc/postgrest.conf
+su node -c '/usr/local/bin/postgrest /etc/postgrest.conf'
+
