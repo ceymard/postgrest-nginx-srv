@@ -8,7 +8,7 @@ useradd -m -d /app -s /bin/bash node
 mkdir /run/nginx
 
 apt-get -q update
-apt-get -q install -y --no-install-recommends libpq5 nginx-light wget xz-utils
+apt-get -q install -y --no-install-recommends libpq5 nginx-light wget xz-utils psmisc
 apt-get -q clean
 
 # Install s6-overlay
