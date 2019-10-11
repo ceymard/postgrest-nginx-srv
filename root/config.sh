@@ -1,7 +1,7 @@
 #!/bin/ash
 
 export NODE_VERSION='10.13.0'
-export POSTGREST_VERSION='5.1.0'
+export POSTGREST_VERSION='6.0.2'
 
 cd /
 useradd -m -d /app -s /bin/bash node
