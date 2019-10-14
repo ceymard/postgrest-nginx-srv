@@ -1,6 +1,9 @@
 NGNode
 ======
 
+/!\ Très important /!\ Il est de la responsabilité de la procédure de login postgres de répondre
+un cookie `accesstoken` contenant le `Bearer sdlfksoj3092ujsdf.fd0isdfkj` dont Postgrest a besoin.
+
 Image docker utilisée pour les projets alliant nodejs avec un nginx pour servir les fichiers statiques.
 
 Il faut monter l'application node dans `/app` et les fichiers statiques dans `/static` (qui seront alors servis depuis / par nginx)
