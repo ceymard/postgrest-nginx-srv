@@ -4,7 +4,7 @@ MAINTAINER Christophe Eymard <christophe.eymard@sales-way.com>
 EXPOSE 80
 
 ADD root /
-RUN /bin/bash /config.sh && rm -f /config.sh
+RUN /bin/bash /config.sh && rm -f /config.sh 
 
 WORKDIR /app
 ENV PATH="/app/node_modules/.bin:${PATH}"

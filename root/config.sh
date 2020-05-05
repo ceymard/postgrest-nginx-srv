@@ -5,6 +5,7 @@ export POSTGREST_VERSION='6.0.2'
 
 cd /
 useradd -m -d /app -s /bin/bash node
+mkdir -p /protected
 mkdir /run/nginx
 
 apt-get -q update
