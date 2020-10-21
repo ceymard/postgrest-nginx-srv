@@ -1,15 +1,15 @@
 #!/bin/ash
 
-export NODE_VERSION='10.13.0'
-export POSTGREST_VERSION='6.0.2'
+#export NODE_VERSION='12.16.3'
+export POSTGREST_VERSION='7.0.0'
 
 cd /
-useradd -m -d /app -s /bin/bash node
+useradd -m -d /server -s /bin/bash user
 mkdir -p /protected
 mkdir /run/nginx
 
 apt-get -q update
-apt-get -q install -y --no-install-recommends libpq5 nginx-light wget xz-utils psmisc
+apt-get -q install -y --no-install-recommends libpq5 nginx-light wget xz-utils psmisc ca-certificates
 apt-get -q clean
 
 # Install s6-overlay
@@ -18,9 +18,9 @@ tar xfz /tmp/s6-overlay.tar.gz -C /
 rm /tmp/s6-overlay.tar.gz
 
 # Install node
-wget https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz --no-check-certificate -O /tmp/node.tar.xz
-tar xf /tmp/node.tar.xz -C /usr --strip 1
-rm /tmp/node.tar.xz
+#wget https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz --no-check-certificate -O /tmp/node.tar.xz
+#tar xf /tmp/node.tar.xz -C /usr --strip 1
+#rm /tmp/node.tar.xz
 
 # Install Postgrest
 wget https://github.com/PostgREST/postgrest/releases/download/v$POSTGREST_VERSION/postgrest-v$POSTGREST_VERSION-ubuntu.tar.xz --no-check-certificate -O /tmp/postgrest.tar.xz

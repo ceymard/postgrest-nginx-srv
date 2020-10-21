@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repo=ceymard/postgrest-nginx-node
+repo=ceymard/postgrest-nginx-srv
 tag=$1
 
 if [ ! "$tag" ]; then
