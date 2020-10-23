@@ -1,10 +1,10 @@
-FROM debian:jessie
+FROM alpine:3.12
 MAINTAINER Christophe Eymard <christophe.eymard@sales-way.com>
 
-EXPOSE 80
+EXPOSE 3001
 
 ADD root /
-RUN /bin/bash /config.sh && rm -f /config.sh 
+RUN /bin/ash /config.sh && rm -f /config.sh 
 
 WORKDIR /app
 ENV PATH="/app/node_modules/.bin:${PATH}"
@@ -23,7 +23,7 @@ ENV PGRST_DB_URI= \
     PGRST_PRE_REQUEST= \
     PGRST_ROLE_CLAIM_KEY=".role"
 
-
+VOLUME ["/saml"]
 ENTRYPOINT ["/init"]
 CMD []
 

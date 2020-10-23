@@ -1,2 +1,4 @@
 #!/usr/bin/with-contenv sh
-su user -c /server/server
+# copy to allow for dev to overwrite the server
+cp /server/server /tmp/server
+su user -c /tmp/server
